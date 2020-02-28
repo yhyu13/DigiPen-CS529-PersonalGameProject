@@ -1,0 +1,18 @@
+#UFO 001_Wave7_Enemy1 
+[Transform
+p(300, -100) v(0, 0) a(0, 0)
+!Circle
+r 64
+]
+[AIController
+p(300, 200)
+fire mode 0 1 2
+]
+[Sprite
+flash_period 0.1
+~./Resource/Sprite/UFO_BOSS_Hit.png Hit 168 168
+~./Resource/Sprite/UFO_BOSS.png Default 168 168 // The very last sprite in the list will be set to the default one
+]
+[HealthPoint
+20000 20000// current hp, max hp
+]

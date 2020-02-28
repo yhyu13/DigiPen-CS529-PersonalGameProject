@@ -1,0 +1,34 @@
+Game objects:
+
+Dec5,6
+0, weapon component (x)
+1, Weapon class lazer - collectable, mutal exclusive (x)
+2, Weapon class kinetic weapon - collectable, mutal exclusive (x)
+3, Weapon class homing missile - collectable, mutal exclusive (x)
+4, Universal weaponary upgrades that upgr	ades lazer, kinetice weapon, and homing missle 
+- Memorized by the weapon component, upgrades are incremental only (x)
+Make damage frame time indifferent (x)
+
+Dec6,
+4.5 Priority rendering (x, using the fact that std::map is ordered by its key)
+4.5, Sound system (x)
+5, Pause menu (Resume, Restart, Main menu, Game Guide) (x)
+6, Beat the game menu (You won!, Main menu) (x)
+7, Failure menu (You die!, Restart, Main menu) (x)
+9, BGM Volume button (x)
+
+Dec7,
+Mechanics:
+1, HP pack - restore the real hp (x)
+2, Upgrade pack (x)
+3, Invincible pack - consumable activative skill (4s depletion) (x)
+4, Score ui, hp ui, (Maybe not?)
+
+Reference
+https://www.bilibili.com/video/av1066398?from=search&seid=11013035783363053575
+(AI: 1, transformation mode 2, firing mode)
+9, small ufo ai (moving from left to right, right to left and launches bullets)
+10, mid ufo ai (holding a position and shoot clusterd bomb)
+12, Boss ufo ai (moving : shooting a waterfall of bullets, holding : shooting clustered bomb)
+
+8, Game Guide menu (On going)

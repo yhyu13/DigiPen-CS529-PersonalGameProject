@@ -1,0 +1,13 @@
+#KineticGunBullet
+[Transform
+p(0, 0) v(0, 0) a(0, 0)
+!Circle
+r 8
+]
+[Sprite
+~./Resource/Sprite/KineticGunBullet2.png lvl2 10 32
+~./Resource/Sprite/KineticGunBullet3.png lvl3 10 32
+~./Resource/Sprite/KineticGunBullet1.png lvl1 10 32 // The very last sprite in the list will be set to the default one
+]
+[SceneComponent
+]

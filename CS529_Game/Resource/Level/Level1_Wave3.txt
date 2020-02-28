@@ -1,0 +1,53 @@
+#UFO 001_Wave3_Enemy1 
+[Transform
+p(700, -100) v(0, 0) a(0, 0)
+!Circle
+r 32
+]
+[AIController
+p(300, 600)
+]
+[Sprite
+flash_period 0.1
+~./Resource/Sprite/UFO1_Hit.png Hit 64 64
+~./Resource/Sprite/UFO1.png Default 64 64 // The very last sprite in the list will be set to the default one
+]
+[HealthPoint
+200 200// current hp, max hp
+]
+
+#UFO 001_Wave3_Enemy2 
+[Transform 
+p(700, -100) v(0, 0) a(0, 0) // One more comment
+!Circle
+r 32
+]
+[AIController
+p(200, 500)
+]
+[Sprite
+flash_period 0.1
+~./Resource/Sprite/UFO1_Hit.png Hit 64 64
+~./Resource/Sprite/UFO1.png Default 64 64 // The very last sprite in the list will be set to the default one
+]
+[HealthPoint
+200 200// current hp, max hp
+]
+
+#UFO 001_Wave3_Enemy3 
+[Transform 
+p(700, -100) v(0, 0) a(0, 0) // One more comment
+!Circle
+r 32
+]
+[AIController
+p(100, 400)
+]
+[Sprite
+flash_period 0.1
+~./Resource/Sprite/UFO1_Hit.png Hit 64 64
+~./Resource/Sprite/UFO1.png Default 64 64 // The very last sprite in the list will be set to the default one
+]
+[HealthPoint
+200 200// current hp, max hp
+]

@@ -1,0 +1,11 @@
+#MissileExplosion
+[Transform
+p(0, 0) v(0, 0) a(0, 0)
+]
+[Sprite
+~./Resource/Sprite/MissileExplosion.png lvl1 32 32
+~./Resource/Sprite/MissileExplosion.png lvl2 32 32
+~./Resource/Sprite/MissileExplosion.png lvl3 32 32
+]
+[SceneComponent
+]

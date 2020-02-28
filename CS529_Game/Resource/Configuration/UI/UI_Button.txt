@@ -1,0 +1,10 @@
+#UI_Button
+[Transform
+p(0, 0) v(0, 0) a(0, 0)
+]
+[Sprite
+~./Resource/Sprite/Test.bmp Hover
+~./Resource/Sprite/Test.bmp Default // The very last sprite in the list will be set to the default one
+]
+[SceneComponent
+]

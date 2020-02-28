@@ -1,0 +1,13 @@
+#MissileBullet
+[Transform
+p(0, 0) v(0, 0) a(0, 0)
+!Rectangle
+w 24 h 24
+]
+[Sprite
+~./Resource/Sprite/Missile1.png lvl1 24 32 // The very last sprite in the list will be set to the default one
+~./Resource/Sprite/Missile2.png lvl2 24 32
+~./Resource/Sprite/Missile3.png lvl3 24 32
+]
+[SceneComponent
+]

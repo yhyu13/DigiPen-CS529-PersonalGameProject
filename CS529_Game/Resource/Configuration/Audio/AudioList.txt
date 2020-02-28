@@ -1,0 +1,9 @@
+Music Menu0 ./Resource/Audio/5528.mp3
+Music Level1 ./Resource/Audio/5533.mp3
+Music BOSS1 ./Resource/Audio/Komiku_-_64_-_First_Dance.mp3
+Music BOSS2 ./Resource/Audio/Komiku_-_58_-_Universe_big_takedown.mp3
+Chunck Victory0 ./Resource/Audio/Victory.mp3
+Chunck Defeat0 ./Resource/Audio/Defeat.mp3
+Chunck Blast ./Resource/Audio/Blast.mp3
+Chunck HPRestore ./Resource/Audio/5488.mp3
+Chunck EnableShield ./Resource/Audio/5487.mp3

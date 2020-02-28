@@ -1,0 +1,13 @@
+#Lazer
+[Transform
+p(0, 0) v(0, 0) a(0, 0)
+!Rectangle
+w 32 h 500
+]
+[Sprite
+~./Resource/Sprite/Lazer2.png lvl2 32 500
+~./Resource/Sprite/Lazer3.png lvl3 32 500
+~./Resource/Sprite/Lazer1.png lvl1 32 500
+]
+[SceneComponent
+]

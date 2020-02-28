@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{2DF88CC8-7037-43F4-A1DC-33148B4586D0}</ProjectGuid>
+    <RootNamespace>CS529Game</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(ProjectDir)$(Platform)\$(Configuration)\</OutDir>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(ProjectDir)$(Platform)\$(Configuration)\</OutDir>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <AdditionalIncludeDirectories>..\SDL2.0 Lib\include;..\SDL2.0 Image\include;..\SDL2.0 Mixer\include;..\GameEngine;.;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>..\SDL2.0 Lib\lib\x86;..\SDL2.0 Image\lib\x86;..\SDL2.0 Mixer\lib\x86;..\Game Engine\$(IntDir)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2test.lib;SDL2_image.lib;SDL2_mixer.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /E /I /Y "$(ProjectDir)Resource" "$(TargetDir)Resource"
+xcopy /E /I /Y "$(ProjectDir)..\SDL2.0 Lib\lib\x86\dll" "$(TargetDir)"
+xcopy /E /I /Y "$(ProjectDir)..\SDL2.0 Image\lib\x86\dll" "$(TargetDir)"
+xcopy /E /I /Y "$(ProjectDir)..\SDL2.0 Mixer\lib\x86\dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <AdditionalIncludeDirectories>..\SDL2.0 Lib\include;..\SDL2.0 Image\include;..\SDL2.0 Mixer\include;..\GameEngine;.;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2test.lib;SDL2_image.lib;SDL2_mixer.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\SDL2.0 Lib\lib\x64;..\SDL2.0 Image\lib\x64;..\SDL2.0 Mixer\lib\x64;..\Game Engine\$(IntDir)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /E /I /Y "$(ProjectDir)Resource" "$(TargetDir)Resource"
+xcopy /E /I /Y "$(ProjectDir)..\SDL2.0 Lib\lib\x64\dll" "$(TargetDir)"
+xcopy /E /I /Y "$(ProjectDir)..\SDL2.0 Image\lib\x64\dll" "$(TargetDir)"
+xcopy /E /I /Y "$(ProjectDir)..\SDL2.0 Mixer\lib\x64\dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <AdditionalIncludeDirectories>..\SDL2.0 Lib\include;..\SDL2.0 Image\include;..\SDL2.0 Mixer\include;..\GameEngine;.;</AdditionalIncludeDirectories>
+      <OmitFramePointers>false</OmitFramePointers>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\SDL2.0 Lib\lib\x86;..\SDL2.0 Image\lib\x86;..\SDL2.0 Mixer\lib\x86;..\Game Engine\$(IntDir)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2test.lib;SDL2_image.lib;SDL2_mixer.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /E /I /Y "$(ProjectDir)Resource" "$(TargetDir)Resource"
+xcopy /E /I /Y "$(ProjectDir)..\SDL2.0 Lib\lib\x86\dll" "$(TargetDir)"
+xcopy /E /I /Y "$(ProjectDir)..\SDL2.0 Image\lib\x86\dll" "$(TargetDir)"
+xcopy /E /I /Y "$(ProjectDir)..\SDL2.0 Mixer\lib\x86\dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <AdditionalIncludeDirectories>..\SDL2.0 Lib\include;..\SDL2.0 Image\include;..\SDL2.0 Mixer\include;..\GameEngine;.;</AdditionalIncludeDirectories>
+      <OmitFramePointers>false</OmitFramePointers>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2test.lib;SDL2_image.lib;SDL2_mixer.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\SDL2.0 Lib\lib\x64;..\SDL2.0 Image\lib\x64;..\SDL2.0 Mixer\lib\x64;..\Game Engine\$(IntDir)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /E /I /Y "$(ProjectDir)Resource" "$(TargetDir)Resource"
+xcopy /E /I /Y "$(ProjectDir)..\SDL2.0 Lib\lib\x64\dll" "$(TargetDir)"
+xcopy /E /I /Y "$(ProjectDir)..\SDL2.0 Image\lib\x64\dll" "$(TargetDir)"
+xcopy /E /I /Y "$(ProjectDir)..\SDL2.0 Mixer\lib\x64\dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Component\Graphics\SceneComponent.cpp" />
+    <ClCompile Include="src\Component\Graphics\Sprite.cpp" />
+    <ClCompile Include="src\Component\Logic\AIController.cpp" />
+    <ClCompile Include="src\Component\Gameplay\HealthPoint.cpp" />
+    <ClCompile Include="src\Component\Logic\PackController.cpp" />
+    <ClCompile Include="src\Component\Logic\PlayerController.cpp" />
+    <ClCompile Include="src\Entity\Gameplay\Interface\IMyGameObject.cpp" />
+    <ClCompile Include="src\Entity\Gameplay\Objects\Background.cpp" />
+    <ClCompile Include="src\Entity\Gameplay\Interface\IWeapon.cpp" />
+    <ClCompile Include="src\Entity\Gameplay\Pack\Pack_HP.cpp" />
+    <ClCompile Include="src\Entity\Gameplay\Pack\Pack_Shield.cpp" />
+    <ClCompile Include="src\Entity\Gameplay\Pack\Pack_Upgrade.cpp" />
+    <ClCompile Include="src\Entity\Gameplay\UI\Button.cpp" />
+    <ClCompile Include="src\Entity\Gameplay\Weapon\KineticGunExplosion.cpp" />
+    <ClCompile Include="src\Entity\Gameplay\Weapon\KineticGun.cpp" />
+    <ClCompile Include="src\Entity\Gameplay\Weapon\KineticGunBullet.cpp" />
+    <ClCompile Include="src\Entity\Gameplay\Weapon\UFOBullet.cpp" />
+    <ClCompile Include="src\SceneManager.cpp" />
+    <ClCompile Include="src\SerializedLoader.cpp" />
+    <ClInclude Include="src\Component\Logic\PackController.hpp" />
+    <ClInclude Include="src\Entity\Gameplay\Interface\IMyGameObject.hpp" />
+    <ClInclude Include="src\Entity\Gameplay\Interface\MyObjectType.hpp" />
+    <ClInclude Include="src\Entity\Gameplay\Pack\Pack_HP.hpp" />
+    <ClInclude Include="src\Entity\Gameplay\Pack\Pack_Score.hpp" />
+    <ClInclude Include="src\Entity\Gameplay\Pack\Pack_Shield.hpp" />
+    <ClInclude Include="src\Entity\Gameplay\Pack\Pack_Upgrade.hpp" />
+    <ClInclude Include="src\Entity\Gameplay\UI\Button.hpp" />
+    <ClInclude Include="src\Entity\Gameplay\Weapon\KineticGunExplosion.hpp" />
+    <ClInclude Include="src\Entity\Gameplay\Weapon\KineticGunBullet.hpp" />
+    <ClCompile Include="src\Entity\Gameplay\Weapon\Lazer.cpp" />
+    <ClCompile Include="src\Entity\Gameplay\Weapon\LazerBeam.cpp" />
+    <ClCompile Include="src\Entity\Gameplay\Weapon\Missile.cpp" />
+    <ClCompile Include="src\Entity\Gameplay\Weapon\MissileBullet.cpp" />
+    <ClCompile Include="src\Entity\Gameplay\Weapon\MissileExplosion.cpp" />
+    <ClCompile Include="src\Entity\Gameplay\Objects\UFO.cpp" />
+    <ClCompile Include="src\GameApplication.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="src\Entity\Gameplay\Objects\Player.cpp" />
+    <ClCompile Include="src\Platform\Win32_SDL\WinSDLAudioManager.cpp" />
+    <ClCompile Include="src\Platform\Win32_SDL\WinSDLInputManager.cpp" />
+    <ClCompile Include="src\Platform\Win32_SDL\WinSDLOpenGLApplication.cpp" />
+    <ClCompile Include="src\Component\Gameplay\WeaponarySystem.cpp" />
+    <ClInclude Include="src\Entity\Gameplay\Weapon\UFOBullet.hpp" />
+    <ClInclude Include="src\SceneManager.hpp" />
+    <ClInclude Include="src\SerializedLoader.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Component\Graphics\SceneComponent.hpp" />
+    <ClInclude Include="src\Component\Graphics\Sprite.hpp" />
+    <ClInclude Include="src\Component\Logic\AIController.hpp" />
+    <ClInclude Include="src\Component\Gameplay\HealthPoint.hpp" />
+    <ClInclude Include="src\Component\Logic\PlayerController.hpp" />
+    <ClInclude Include="src\Entity\Gameplay\Objects\Background.hpp" />
+    <ClInclude Include="src\Entity\Gameplay\Weapon\LazerBeam.hpp" />
+    <ClInclude Include="src\Entity\Gameplay\Weapon\MissileExplosion.hpp" />
+    <ClInclude Include="src\Entity\Gameplay\Weapon\Missile.hpp" />
+    <ClInclude Include="src\Entity\Gameplay\Weapon\KineticGun.hpp" />
+    <ClInclude Include="src\Entity\Gameplay\Weapon\Lazer.hpp" />
+    <ClInclude Include="src\Entity\Gameplay\Interface\IWeapon.hpp" />
+    <ClInclude Include="src\Entity\Gameplay\Interface\WeaponType.hpp" />
+    <ClInclude Include="src\Entity\Gameplay\Weapon\MissileBullet.hpp" />
+    <ClInclude Include="src\Entity\Gameplay\Objects\UFO.hpp" />
+    <ClInclude Include="src\Event\MyEvent.hpp" />
+    <ClInclude Include="src\GameApplication.hpp" />
+    <ClInclude Include="src\Entity\Gameplay\Objects\Player.hpp" />
+    <ClInclude Include="Main.hpp" />
+    <ClInclude Include="src\Platform\Win32_SDL\WinSDLAudioManager.hpp" />
+    <ClInclude Include="src\Platform\Win32_SDL\WinSDLInputManager.hpp" />
+    <ClInclude Include="src\Platform\Win32_SDL\WinSDLOpenGLApplication.hpp" />
+    <ClInclude Include="src\Component\Gameplay\WeaponarySystem.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GameEngine\Game Engine.vcxproj">
+      <Project>{9ad7f407-7e41-4d2c-bfec-a3a707437956}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\Shader\part4.frag" />
+    <None Include="Resource\Shader\part4.vert" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,13 @@
+#UFOBullet
+[Transform
+p(0, 0) v(0, 0) a(0, 0)
+!Circle
+r 5
+]
+[Sprite
+~./Resource/Sprite/UFOBullet1.png lvl1 11 11 // The very last sprite in the list will be set to the default one
+~./Resource/Sprite/UFOBullet2.png lvl2 11 11
+~./Resource/Sprite/UFOBullet3.png lvl3 10 24
+]
+[SceneComponent
+]

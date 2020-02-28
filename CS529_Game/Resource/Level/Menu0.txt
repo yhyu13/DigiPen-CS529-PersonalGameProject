@@ -1,0 +1,54 @@
+[MAX_FPS 120 ]
+
+
+#Background Background
+[Transform 
+p(0, 0) v(0, 100) a(0, 0) // One more comment
+]
+
+#UI_Volume_Button UI_Volume_Button
+[Transform
+p(550, 50) v(0, 0) a(0,0)
+]
+[Sprite
+~./Resource/Sprite/UI/UI_Volume_Off.png Off 24 24
+~./Resource/Sprite/UI/UI_Volume_Reduce.png Reduce 24 24
+~./Resource/Sprite/UI/UI_Volume_On.png On 24 18 // The very last sprite in the list will be set to the default one
+]
+
+#UI_Button Game_Title_Text
+[Transform
+p(300, 200) v(0, 0) a(0,0)
+]
+[Sprite
+~./Resource/Sprite/UI/UI_Title.png Default 600 100 // The very last sprite in the list will be set to the default one
+]
+
+
+#UI_Button UI_Start_Button
+[Transform
+p(300, 350) v(0, 0) a(0,0)
+]
+[Sprite
+~./Resource/Sprite/UI/UI_NewGame_hover.png Hover
+~./Resource/Sprite/UI/UI_NewGame.png Default // The very last sprite in the list will be set to the default one
+]
+
+#UI_Button UI_GameGuide_Button
+[Transform
+p(300, 450) v(0, 0) a(0,0)
+]
+[Sprite
+~./Resource/Sprite/UI/UI_Guide_hover.png Hover
+~./Resource/Sprite/UI/UI_Guide.png Default // The very last sprite in the list will be set to the default one
+]
+
+#UI_Button UI_Quit_Button
+[Transform
+p(300, 550) v(0, 0) a(0,0)
+]
+[Sprite
+~./Resource/Sprite/UI/UI_Quit_hover.png Hover
+~./Resource/Sprite/UI/UI_Quit.png Default // The very last sprite in the list will be set to the default one
+]
+

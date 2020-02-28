@@ -1,0 +1,11 @@
+#KineticGunExplosion
+[Transform
+p(0, 0) v(0, 0) a(0, 0)
+]
+[Sprite
+~./Resource/Sprite/KineticGunExplosion.png lvl1 24 24
+~./Resource/Sprite/KineticGunExplosion.png lvl2 24 24
+~./Resource/Sprite/KineticGunExplosion.png lvl3 24 24
+]
+[SceneComponent
+]

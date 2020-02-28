@@ -1,0 +1,9 @@
+#Background
+[Transform
+p(0, 0) v(0, 0) a(0, 0)
+]
+[Sprite
+~./Resource/Sprite/Background2.png Default
+]
+[SceneComponent
+]

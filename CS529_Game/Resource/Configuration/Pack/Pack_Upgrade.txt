@@ -1,0 +1,13 @@
+#Pack_Upgrade
+[Transform
+p(0, 0) v(0, 0) a(0, 0)
+!Rectangle
+w 25 h 25
+]
+[PackController
+]
+[Sprite
+~./Resource/Sprite/Item_Upgrade.png Default 25 25 // The very last sprite in the list will be set to the default one
+]
+[SceneComponent
+]

@@ -1,0 +1,6 @@
+#UFO
+[Transform 
+p(0, 0) v(0, 0) a(0, 0) // One more comment
+]
+[SceneComponent
+]

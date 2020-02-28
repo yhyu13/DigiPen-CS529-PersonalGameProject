@@ -1,0 +1,25 @@
+#Player
+[Transform
+p(0, 0) v(0, 0) a(0, 0)
+!Circle
+r 16
+]
+[PlayerController
+]
+[Sprite
+flash_period 0.2
+~./Resource/Sprite/Player2_Shield.png Shield 64 64
+~./Resource/Sprite/Player2_Hit.png Hit 64 64
+~./Resource/Sprite/Player2.png Default 64 64 // The very last sprite in the list will be set to the default one
+]
+[SceneComponent
+]
+[HealthPoint
+100 100 // current hp, max hp
+]
+[WeaponarySystem
+Max 2
+1 Lazer 001_Player_Lazer			// Caution : Change weapon name will afect weaponarySystem::ChangeWeapon() as it requires the full name of the weapon
+1 KineticGun 002_Player_KineticGun	// Caution : Change weapon name will afect weaponarySystem::ChangeWeapon() as it requires the full name of the weapon
+2 Missile 002_Player_Missile		// Caution : Change weapon name will afect weaponarySystem::ChangeWeapon() as it requires the full name of the weapon
+]
